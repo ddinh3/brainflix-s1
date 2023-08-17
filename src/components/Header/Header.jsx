@@ -13,6 +13,7 @@ const Header = () => {
       </div>
       <div className="header__upload">
         <UploadButton />
+        <ProfilePictureTab />
       </div>
     </header>
   );
@@ -37,6 +38,14 @@ const ProfilePicture = () => (
     src={profilePicture}
     alt="Mohan"
     className="header__profile-picture"></img>
+);
+
+
+const ProfilePictureTab = () => (
+  <img
+    src={profilePicture}
+    alt="Mohan"
+    className="header__profile-picture-tab"></img>
 );
 
 export default Header;

@@ -16,11 +16,13 @@
 
   @include desktop {
     padding: 1rem 8rem;
+
   }
 
   &__image {
-    text-align: center;
+    justify-content: center;
     width: 100%;
+    display: flex;
     .header__logo {
       height: 30px;
       margin-bottom: 8px;
@@ -60,8 +62,7 @@
       border-radius: 100%;
 
       @include tablet {
-        width: 2.5rem;
-        height: 2.5rem;
+        display: none;
       }
     }
   }
@@ -70,6 +71,24 @@
     display: flex;
     justify-content: center;
     width: 100%;
+
+    .header__profile-picture-tab {    
+      display: none;
+
+      @include tablet {
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+      }
+
+      @include tablet {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+      }
+
+    }
 
     .header__button {
       font-family: "Avenir Bold";
