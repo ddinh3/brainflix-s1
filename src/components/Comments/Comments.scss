@@ -1,0 +1,57 @@
+@import "../../styles/partials/typography";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.Comment {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 1rem;
+  border-bottom:$primary-colorsilver 1px solid ;
+//   border: black solid 5px;
+
+  @include tablet {
+    margin: 0 2.5rem;
+  }
+
+  @include desktop {
+    margin: 0;
+    padding: 0 1.5rem 2rem 1.5rem;
+  }
+
+        &__profile {
+          border-radius: 50%;
+          background-color: $secondary-colormercury;
+          height: 2.5rem;
+          width: 2.5rem;
+        }
+
+    &__container {
+        // border: red solid 4px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+        &__header {
+            // border: red solid 4px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+            &__name {
+                font-weight: 600;
+                padding: 1rem 0;
+            }
+            
+            &__date {
+            color: $primary-colorsilver;
+            padding: 1rem 0;
+            }
+        
+        
+        &__text {
+        padding: 0;
+
+        }
+    }
+    
