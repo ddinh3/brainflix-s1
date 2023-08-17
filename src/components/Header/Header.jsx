@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../assets/Logo/BrainFlix-logo.svg";
 import profilePicture from "../../assets/Images/Mohan-muruge.jpg";
-import "../Header/Header.css";
+import "../Header/Header.scss";
 
 const Header = () => {
   return (

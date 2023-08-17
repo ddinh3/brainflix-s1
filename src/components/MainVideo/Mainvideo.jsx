@@ -1,3 +1,5 @@
+import "../MainVideo/MainVideo.scss";
+
 const MainVideo = (props) => {
     return (
         <section className="hero">

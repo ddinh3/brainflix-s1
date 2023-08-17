@@ -1,0 +1,13 @@
+@import "../../styles/partials/typography";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+
+.hero {
+    background-color: #333;
+    padding: 20px;
+  }
+  
+  .hero__player {
+    width:50%;
+  }
