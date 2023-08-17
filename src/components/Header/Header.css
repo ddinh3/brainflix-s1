@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Avenir Regular";
+  src: url(../../assets/Font/AvenirNextLTPro-Regular.otf);
+}
+@font-face {
+  font-family: "Avenir Demi Bold";
+  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf);
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.header__image {
+  text-align: center;
+  width: 100%;
+}
+.header__image .header__logo {
+  height: 30px;
+  margin-bottom: 8px;
+}
+.header__middle {
+  display: flex;
+  justify-content: space-between;
+}
+.header__middle .header__form {
+  width: 100%;
+}
+.header__middle .header__form .header__search {
+  display: flex;
+  width: 80%;
+  height: 25px;
+  margin-bottom: 8px;
+  background-image: url("../../assets/Icons/search.svg");
+  background-repeat: no-repeat;
+}
+.header__middle .header__profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.header__upload {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.header__upload .header__button {
+  font-family: "Avenir Bold";
+  background-color: #0095FF;
+  border: none;
+  border-radius: 5px;
+  color: #FFFFFF;
+  height: 100%;
+  width: 70%;
+  margin-right: 20px;
+  font-size: 1.2rem;
+  height: 80%;
+}
