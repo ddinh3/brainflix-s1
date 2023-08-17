@@ -1,0 +1,80 @@
+@import "../../../styles/partials/typography";
+@import "../../../styles/partials/mixins";
+@import "../../../styles/partials/variables";
+
+
+
+
+.MainVideoDescription__info {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+    
+    .MainVideoDescription__title {
+    padding: 1.5rem 1rem 1rem 1rem;
+    }
+    
+    .MainVideoDescription__details {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     margin: 0 1rem;
+     padding: 1rem 0;
+     border-top: 1px solid $secondary-colormercury;
+     border-bottom: 1px solid $secondary-colormercury;
+
+     @include tablet {
+        justify-content: space-between;
+        border-top: 0;
+        margin: 0;
+        padding-top: 0px;
+     }
+
+     @include desktop {
+        padding-right: 1rem;
+     }
+        
+        .MainVideoDescription__left {
+            display: flex;
+            flex-direction: column;
+
+            @include tablet {
+                flex-direction: row;
+                gap:2rem;
+
+            }
+            
+            .MainVideoDescription__author {
+                font-weight: 800;
+                color: $primary-colorblack;
+            }
+
+        }
+        
+        .MainVideoDescription__right {
+            display: flex;
+            flex-direction: column;
+            
+            @include tablet {
+                flex-direction: row;
+                gap: 2rem;
+            }
+            
+            .MainVideoDescription__views,
+            .MainVideoDescription__likes {
+              display: flex;
+              justify-content: space-between;
+                
+            }
+        }
+    }
+    
+    .MainVideoDescription__paragraph {
+        text-align: left;
+       padding: 1rem;
+
+       @include tablet {
+        padding: 1rem 0;
+       }
+    }
+}
