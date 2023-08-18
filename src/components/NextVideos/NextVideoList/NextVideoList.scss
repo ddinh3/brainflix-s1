@@ -1,0 +1,30 @@
+@import "../../../styles/partials/typography";
+@import "../../../styles/partials/mixins";
+@import "../../../styles/partials/variables";
+
+
+.next__list {
+  padding: 0 1rem;
+
+  @include tablet {
+    padding: 1.5rem 2.5rem;
+    width: 50%;
+  }
+  @include desktop {
+    border-left: 1px solid $secondary-colormercury;
+    
+  }
+
+
+    &-title {
+        color:$primary-colorsilver;
+        font-weight: 700;
+        padding: 0;
+}
+}
+
+.bigcontainer {
+    @include desktop {
+    display: flex;
+    }
+}
