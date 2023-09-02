@@ -7,6 +7,9 @@ import CommentsList from "./components/Comments/CommentsList/CommentsList";
 import NextList from "./components/NextVideos/NextVideoList/NextVideoList";
 import videoList from "../src/Data/video-details.json";
 
+// This is my api_key = "api_key": "2d0130ba-bf7d-4e48-8424-88f2b2bb4903"
+
+
 function App() {
   const [currentVideo, setCurrentVideo] = useState(videoList[0]);
 
