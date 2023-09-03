@@ -1,5 +1,5 @@
 import './UploadForm.scss'
-import thumbnail from '../../assets/Images/Mohan-muruge.jpg';
+import thumbnail from '../../assets/Images/Upload-video-preview.jpg';
 import publishIcon  from '../../assets/Icons/publish.svg';
 
 function UploadForm ()  {

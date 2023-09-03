@@ -50,18 +50,18 @@ function CommentsForm({ currentVideo, API_URL, API_Key, setComments }) {
 
 
     return (
-        <div className="comments__wrapper">
-            <div className="comments__avatar"></div>
-            <form id="commentsForm" onSubmit={handleSubmit} className="comments__form">
-                <div className="comments__input-container">
-                    <label htmlFor="comment" className="comments__subtitle">join the conversation</label>
-                    <textarea id="inputComment" className="comments__input comments__input" name="comment"
+        <div className="Comments__container">
+            <div className="Comments__profile"></div>
+            <form id="CommentsForm" onSubmit={handleSubmit} className="Comments__form">
+                <div className="Comments__input-container">
+                    <label htmlFor="Comment" className="Comments__subtitle">join the conversation</label>
+                    <textarea id="inputComment" className="Comments__input" name="comment"
                         placeholder="Add a new comment" onChange={handleCommentChange}></textarea>
                 </div>
-                <button type="submit" className="button comments__btn">
-                    <img src={commentIcon} alt="comment icon"
-                        className='button__icon'></img>
-                    <span className="button__text">COMMENT</span>
+                <button type="submit" className="Comments__button">
+                    <img src={commentIcon} alt="Comment icon"
+                        className='Button__icon'></img>
+                    <span className="Button__text">COMMENT</span>
                 </button>
             </form>
         </div>
