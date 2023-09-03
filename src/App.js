@@ -1,36 +1,25 @@
-import React, {useState} from "react";
 import Header from "./components/Header/Header";
-// import './App.css';
-import MainVideo from "./components/MainVideo/MainVideo";
-import MainVideoDescription from "./components/MainVideo/MainVideoDescription/MainVideoDescription";
-import CommentsList from "./components/Comments/CommentsList/CommentsList";
-import NextList from "./components/NextVideos/NextVideoList/NextVideoList";
-import videoList from "../src/Data/video-details.json";
-
-// This is my api_key = "api_key": "2d0130ba-bf7d-4e48-8424-88f2b2bb4903"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import VideoUploadPage from "./components/Upload/UploadForm";
+import Home from "./Pages/Home";
+import React from "react";
 
 
 function App() {
-  const [currentVideo, setCurrentVideo] = useState(videoList[0]);
-
-  const handleClick = (title) => {
-    const foundVideo = videoList.find((video) => video.title === title);
-    setCurrentVideo(foundVideo);
-  };
-  
   return (
-    <div className="App">
-      <Header />
-      <MainVideo currentVideo={currentVideo} />
-      <div className="bigcontainer">
-        <section className="video">
-          <MainVideoDescription currentVideo={currentVideo} />
-          <CommentsList currentVideo={currentVideo} />
-        </section>
-        <NextList videoList={videoList.filter((video) => video.title !== currentVideo.title)} handleVideoClick={handleClick} />
+    <BrowserRouter> 
+      <div className="App">
+        <Header />
+        <Routes>
+        <Route path='/' element={<Home />} />
+          <Route path='/videos/:id' element={<Home />} />
+          <Route path='/upload' element={<VideoUploadPage />} />
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+
