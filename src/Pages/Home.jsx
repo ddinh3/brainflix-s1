@@ -33,7 +33,7 @@ function Home() {
   return (
     <>
       {currentVideo && <MainVideo currentVideo={currentVideo} />}
-      <div className="container">
+      <div className="bigcontainer">
         <section className="video">
           {currentVideo && <MainVideoDescription currentVideo={currentVideo} />}
           {currentVideo && (
