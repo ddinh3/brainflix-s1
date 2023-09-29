@@ -14,7 +14,7 @@ function App() {
         <Route path='/' element={<Home />} />
           <Route path='/videos/:id' element={<Home />} />
           <Route path='/upload' element={<VideoUploadPage />} />
-          <Route path='*' element={<h2>Oops! Page not found.</h2>} />
+          <Route path='*' element={<Home />} />
         </Routes>
       </div>
     </BrowserRouter>

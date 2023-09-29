@@ -3,51 +3,48 @@ import commentIcon from "../../../assets/Icons/add_comment.svg"
 import { useState } from "react";
 import axios from "axios";
 
-function CommentsForm({ currentVideo, API_URL, API_Key, setComments }) {
-
-    const user = "Mohan Muruge"
+function CommentsForm({ currentVideo, API_URL, setComments }) {
+    const user = "Mohan Muruge";
     const [comment, setComment] = useState("");
-
+  
     const handleCommentChange = (event) => {
-        setComment(event.target.value);
-    }
-
+      setComment(event.target.value);
+    };
+  
     const isFormValid = () => {
-        if (!comment) {
-            return false;
-        }
-
-        return true;
-    }
-
+      return comment.trim() !== "";
+    };
+  
     const handleSubmit = (event) => {
-        event.preventDefault();
-        event.target.reset();
-
-        if (isFormValid()) {
-            let commentObject = {
-                name: user,
-                comment: comment
-            }
-
-            let videoId = currentVideo.id;
-
-            axios.post(`${API_URL}/videos/${videoId}/comments${API_Key}`, commentObject)
-                .then(response => {
-                    console.log(response)
-                    return axios.get(`${API_URL}/videos/${videoId}${API_Key}`)
-                })
-                .then(response => {
-                    setComments(response.data.comments)
-                })
-                .catch(error => {
-                    console.log(error)
-                })
-        } else {
-            console.log("Error submitting the comment")
-        }
+      event.preventDefault();
+  
+      if (isFormValid()) {
+        let commentObject = {
+          name: user,
+          comment: comment,
+        };
+  
+        let videoId = currentVideo.id;
+  
+        axios
+          .post(`${API_URL}/videos/${videoId}/comments`, commentObject)
+          .then((response) => {
+            console.log(response);
+            return axios.get(`${API_URL}/videos/${videoId}`);
+          })
+          .then((response) => {
+            setComments(response.data.comments);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+  
+        // Reset the comment input field
+        setComment("");
+      } else {
+        console.log("Error submitting the comment");
+      }
     }
-
 
     return (
         <div className="Comments__container">
