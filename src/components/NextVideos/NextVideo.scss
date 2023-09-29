@@ -4,7 +4,22 @@
 
 
 
-.next{
+.next {
+    
+    &>a {
+        text-decoration: none;
+        color: inherit;
+        padding: 0;
+    }
+
+    @include desktop {
+        padding-right: 0;
+        padding-left: 16px;
+        width: 80%;
+    }
+
+
+
 &__video {
     display: flex;
     align-items: center;
@@ -52,3 +67,8 @@
     }
 }
 }
+
+.next__video-name {
+    text-decoration: none;
+}
+

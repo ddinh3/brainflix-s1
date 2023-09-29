@@ -1,9 +1,9 @@
 import "../MainVideo/MainVideo.scss";
 
-const MainVideo = (props) => {
+const MainVideo = ({currentVideo}) => {
     return (
         <section className="hero">
-            <video poster={props.currentVideo.image} className="hero__player" controls>
+            <video poster={currentVideo.image} className="hero__player" controls>
             </video>
         </section>
       );

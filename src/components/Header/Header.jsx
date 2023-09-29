@@ -2,6 +2,8 @@ import React from "react";
 import logo from "../../assets/Logo/BrainFlix-logo.svg";
 import profilePicture from "../../assets/Images/Mohan-muruge.jpg";
 import "../Header/Header.scss";
+import uploadIcon from "../../assets/Icons/upload.svg"
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -21,7 +23,7 @@ const Header = () => {
 
 const Trademark = () => (
   <div className="header__image">
-    <img src={logo} alt="Brainflix-logo" className="header__logo" />
+    <NavLink to="/"><img src={logo} alt="Brainflix-logo" className="header__logo" /></NavLink>
   </div>
 );
 
@@ -31,7 +33,14 @@ const Search = () => (
   </div>
 );
 
-const UploadButton = () => <button className="header__button"> Upload</button>;
+const UploadButton = () => (
+  <NavLink to="/upload" className="header__btn-link">
+    <button className="button header__btn">
+      <img src={uploadIcon} alt="upload icon" className="button__icon" />
+      <span className="button__text">UPLOAD</span>
+    </button>
+  </NavLink>
+);
 
 const ProfilePicture = () => (
   <img
